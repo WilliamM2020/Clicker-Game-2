@@ -20,7 +20,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GlobalVariables="*res://AutoLoad/GlobalVariables.gd"
+GlobalVariables="*res://scripts/autoload/GlobalVariables.gd"
 
 [rendering]
 

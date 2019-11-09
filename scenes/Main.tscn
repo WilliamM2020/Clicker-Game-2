@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scripts/TileManager.gd" type="Script" id=2]
 [ext_resource path="res://tilesets/landscape_tiles.tres" type="TileSet" id=3]
-[ext_resource path="res://textures/sky.jpeg" type="Texture" id=4]
+[ext_resource path="res://textures/attractions/castle.png" type="Texture" id=4]
+[ext_resource path="res://textures/sky.jpeg" type="Texture" id=5]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,7 +18,12 @@ tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 51 )
 cell_half_offset = 0
 format = 1
-tile_data = PoolIntArray( 0, 1, 0 )
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 131071, 0, 0, 65536, 0, 0 )
+
+[node name="Palace" type="Sprite" parent="TileManager"]
+position = Vector2( 61.1262, 16.3245 )
+scale = Vector2( 0.87382, 0.87382 )
+texture = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -30,4 +36,4 @@ scroll_base_scale = Vector2( 1.2, 1.2 )
 visible = false
 position = Vector2( 288, 152 )
 scale = Vector2( 10, 10 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )

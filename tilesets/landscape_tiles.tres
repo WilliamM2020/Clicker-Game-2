@@ -12,9 +12,9 @@
 [ext_resource path="res://textures/tiles/tileAutumn.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 22, -31.7538, 7 )
+vertices = PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 23, -31.7538, 7 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
-outlines = [ PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 22, -31.7538, 7 ) ]
+outlines = [ PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 23, -31.7538, 7 ) ]
 
 [resource]
 0/name = "Grass"

@@ -3,7 +3,10 @@ extends Node2D
 var hold_pos
 
 func _ready():
-	pass
+	$GUI/HUD.connect("menu_button_pressed",self,"_on_Menu_Button_pressed")
+
+func _on_Menu_Button_pressed():
+	print("menu open")
 
 func _process(delta):
 	pass

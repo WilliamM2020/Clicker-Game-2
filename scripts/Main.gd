@@ -10,7 +10,7 @@ func _ready():
 	$Attraction.position = Vector2(256,190)
 	$Attraction.initialize(2,3)
 
-func _physics_process(delta):
+func _process(delta):
 	get_input()
 	
 func get_input():

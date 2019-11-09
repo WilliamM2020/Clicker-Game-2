@@ -16,18 +16,15 @@ func _input(event):
 	if Input.is_action_pressed("mouse1"):
 		var offset = Vector2(hold_pos.x - get_global_mouse_position().x, hold_pos.y - get_global_mouse_position().y)
 		$Camera2D.translate(offset)
-		
-		
 	if Input.is_action_pressed("zoom_out"):
 #		print("wheel up (event)")
 #		zoom[0] = zoom[0] + 0.25
 #		zoom[1] = zoom[1] + 0.25
 #		$Camera2D.set_zoom(zoom)
-		$Camera2D.zoom_at_point(1.1,get_global_mouse_position())
+		$Camera2D.zoom_at_mouse(1.1)
 	if Input.is_action_pressed("zoom_in"):
-		
 		if(zoom[0] - 0.25 > 0 && zoom[1] - 0.25 > 0):
 #			zoom[0] = zoom[0] - 0.25
 #			zoom[1] = zoom[1] - 0.25
 #			$Camera2D.set_zoom(zoom)
-			$Camera2D.zoom_at_point(1/1.1,get_global_mouse_position())
+			$Camera2D.zoom_at_mouse(1/1.1)

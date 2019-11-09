@@ -6,7 +6,7 @@
 [ext_resource path="res://textures/SelectionHex.png" type="Texture" id=4]
 [ext_resource path="res://textures/BaseHex.png" type="Texture" id=5]
 [ext_resource path="res://textures/attractions/castle.png" type="Texture" id=6]
-[ext_resource path="res://scenes/Camera2D.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Camera2D.gd" type="Script" id=7]
 [ext_resource path="res://textures/sky.jpeg" type="Texture" id=8]
 [ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=9]
 
@@ -55,6 +55,6 @@ position = Vector2( 105.71, 103.027 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 
-[node name="Top Layer" type="CanvasLayer" parent="."]
+[node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="Top Layer" instance=ExtResource( 9 )]
+[node name="HUD" parent="GUI" instance=ExtResource( 9 )]

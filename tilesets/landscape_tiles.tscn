@@ -1,20 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://textures/tiles/tileGrass.png" type="Texture" id=1]
 [ext_resource path="res://textures/tiles/tileRock_full.png" type="Texture" id=2]
-[ext_resource path="res://textures/tiles/tileSand.png" type="Texture" id=3]
-[ext_resource path="res://textures/tiles/tileSnow.png" type="Texture" id=4]
-[ext_resource path="res://textures/tiles/tileStone_full.png" type="Texture" id=5]
-[ext_resource path="res://textures/tiles/tileWater_full.png" type="Texture" id=6]
-[ext_resource path="res://textures/tiles/tileDirt.png" type="Texture" id=7]
+[ext_resource path="res://textures/tiles/tileSand_full.png" type="Texture" id=3]
+[ext_resource path="res://textures/tiles/tileSnow_full.png" type="Texture" id=4]
+[ext_resource path="res://textures/tiles/tileWater_full.png" type="Texture" id=5]
+[ext_resource path="res://textures/tiles/tileDirt_full.png" type="Texture" id=6]
+[ext_resource path="res://textures/tiles/tileLava_full.png" type="Texture" id=7]
 [ext_resource path="res://textures/tiles/tileMagic.png" type="Texture" id=8]
-[ext_resource path="res://textures/tiles/tileLava_full.png" type="Texture" id=9]
-[ext_resource path="res://textures/tiles/tileAutumn.png" type="Texture" id=10]
+[ext_resource path="res://textures/tiles/tileAutumn_full.png" type="Texture" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 23, -31.7538, 7 )
+vertices = PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 22, -31.7538, 7 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ) ]
-outlines = [ PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 23, -31.7538, 7 ) ]
+outlines = [ PoolVector2Array( -31.7538, -28, 0, -44, 31.7538, -28, 31.7538, 6, 0, 22, -31.7538, 7 ) ]
 
 [node name="Node2D" type="Node"]
 
@@ -27,7 +26,7 @@ scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
 [node name="Rock" type="Sprite" parent="."]
-position = Vector2( 0, 131 )
+position = Vector2( 87, 28 )
 texture = ExtResource( 2 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Rock"]
@@ -35,7 +34,7 @@ scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
 [node name="Sand" type="Sprite" parent="."]
-position = Vector2( 167, 28 )
+position = Vector2( 174, 28 )
 texture = ExtResource( 3 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sand"]
@@ -43,56 +42,48 @@ scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
 [node name="Snow" type="Sprite" parent="."]
-position = Vector2( 167, 131 )
+position = Vector2( 261, 28 )
 texture = ExtResource( 4 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Snow"]
 scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
-[node name="Stone" type="Sprite" parent="."]
-position = Vector2( 84, 28 )
-texture = ExtResource( 5 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Stone"]
-scale = Vector2( 1.00775, 1 )
-navpoly = SubResource( 1 )
-
 [node name="Water" type="Sprite" parent="."]
-position = Vector2( 84, 131 )
-texture = ExtResource( 6 )
+position = Vector2( 347, 28 )
+texture = ExtResource( 5 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Water"]
 scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
 [node name="Dirt" type="Sprite" parent="."]
-position = Vector2( 251, 28 )
-texture = ExtResource( 7 )
+position = Vector2( 432, 28 )
+texture = ExtResource( 6 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Dirt"]
 scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
+[node name="Lava" type="Sprite" parent="."]
+position = Vector2( -1, 128 )
+texture = ExtResource( 7 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Lava"]
+scale = Vector2( 1.00775, 1 )
+navpoly = SubResource( 1 )
+
 [node name="Magic" type="Sprite" parent="."]
-position = Vector2( 251, 131 )
+position = Vector2( 86, 128 )
 texture = ExtResource( 8 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Magic"]
 scale = Vector2( 1.00775, 1 )
 navpoly = SubResource( 1 )
 
-[node name="Lava" type="Sprite" parent="."]
-position = Vector2( 332, 131 )
-texture = ExtResource( 9 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Lava"]
-scale = Vector2( 1.00775, 1 )
-navpoly = SubResource( 1 )
-
 [node name="Autumn" type="Sprite" parent="."]
-position = Vector2( 412, 131 )
-texture = ExtResource( 10 )
+position = Vector2( 174, 128 )
+texture = ExtResource( 9 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Autumn"]
 scale = Vector2( 1.00775, 1 )

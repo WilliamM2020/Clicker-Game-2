@@ -10,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	get_input()
-	
+
 func get_input():
 	if Input.is_action_just_pressed("mouse1"):
 		hold_pos = get_global_mouse_position()

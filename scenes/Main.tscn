@@ -5,6 +5,8 @@
 [ext_resource path="res://tilesets/landscape_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://textures/SelectionHex.png" type="Texture" id=4]
 [ext_resource path="res://textures/sky.jpeg" type="Texture" id=5]
+[ext_resource path="res://textures/attractions/castle.png" type="Texture" id=6]
+[ext_resource path="res://textures/attractions/blue test.png" type="Texture" id=7]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,7 +20,12 @@ tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 51 )
 cell_half_offset = 0
 format = 1
-tile_data = PoolIntArray( 0, 1, 0 )
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 131071, 0, 0, 65536, 0, 0 )
+
+[node name="Palace" type="Sprite" parent="TileManager"]
+position = Vector2( 61.1262, 16.3245 )
+scale = Vector2( 0.87382, 0.87382 )
+texture = ExtResource( 6 )
 
 [node name="SelectionHex" type="Sprite" parent="TileManager/TileMap"]
 visible = false
@@ -33,7 +40,6 @@ current = true
 scroll_base_scale = Vector2( 1.2, 1.2 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-visible = false
-position = Vector2( 288, 152 )
-scale = Vector2( 10, 10 )
+position = Vector2( 105.71, 103.027 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )

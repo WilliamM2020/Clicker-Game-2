@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/TileManager.gd" type="Script" id=2]
 [ext_resource path="res://tilesets/landscape_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://textures/attractions/castle.png" type="Texture" id=4]
-[ext_resource path="res://textures/sky.jpeg" type="Texture" id=5]
+[ext_resource path="res://textures/attractions/blue test.png" type="Texture" id=5]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,7 +33,6 @@ current = true
 scroll_base_scale = Vector2( 1.2, 1.2 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-visible = false
-position = Vector2( 288, 152 )
-scale = Vector2( 10, 10 )
+position = Vector2( 105.71, 103.027 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )

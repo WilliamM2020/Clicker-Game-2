@@ -31,7 +31,7 @@ func attempt_selection():
 		print("top left triangle")
 		set_base_hex(tile)
 		return
-	if point_in_traingle(pos, tile_pos + Vector2(32,0), tile_pos + Vector2(64,0), tile_pos + Vector2(0,16)):
+	if point_in_traingle(pos, tile_pos + Vector2(32,0), tile_pos + Vector2(64,0), tile_pos + Vector2(64,16)):
 		select_tile(tile + Vector2(1,-1))
 		print("top right triangle")
 		set_base_hex(tile)

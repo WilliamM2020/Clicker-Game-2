@@ -16,4 +16,4 @@ func zoom_at_mouse(zoom_change):
 		zoom = Vector2(2.3,2.3)
 	else:
 		zoom = z1
-		position = (c0 - get_global_mouse_position()) * z0 / z1 + get_global_mouse_position()
+		position = (c0 - get_global_mouse_position()) * z1 / z0 + get_global_mouse_position()

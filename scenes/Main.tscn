@@ -16,4 +16,7 @@ tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 51 )
 cell_half_offset = 0
 format = 1
-tile_data = PoolIntArray( -131071, 1, 0, -1, 1, 0, -65536, 0, 0, -65535, 0, 0, -65534, 1, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 131071, 1, 0, 65536, 0, 0, 65537, 0, 0, 65539, 7, 0 )
+tile_data = PoolIntArray( -131071, 1, 0, -1, 1, 0, -65536, 0, 0, -65535, 0, 0, -65534, 1, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 1, 0, 131071, 1, 0, 65536, 0, 0, 65537, 0, 0, 65538, 1, 0, 65539, 7, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

@@ -1,10 +1,7 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var hold_pos
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var attraction = load("res://scenes/Attraction.tscn")
 	var new_attraction = attraction.instance()
@@ -13,6 +10,12 @@ func _ready():
 	$Attraction.position = Vector2(256,190)
 	$Attraction.initialize(2,3)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _physics_process(delta):
+	get_input()
+	
+func get_input():
+	if Input.is_action_just_pressed("mouse1"):
+		hold_pos = get_global_mouse_position()
+	if Input.is_action_pressed("mouse1"):
+		var offset = Vector2(hold_pos.x - get_global_mouse_position().x, hold_pos.y - get_global_mouse_position().y)
+		$Camera2D.translate(offset)

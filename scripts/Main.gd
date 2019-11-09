@@ -3,10 +3,7 @@ extends Node2D
 var hold_pos
 
 func _ready():
-	$TileManager.set_tile(1,Vector2(0,0))
-	for tile in $TileManager.get_adjacent_tiles(Vector2(0,0)):
-		$TileManager.set_tile(2,tile)
-	$TileManager.select_tile(Vector2(0,1))
+	pass
 
 func _process(delta):
 	get_input()

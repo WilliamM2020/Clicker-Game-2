@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GlobalVariables",
 "language": "GDScript",
 "path": "res://scripts/autoload/GlobalVariables.gd"
+}, {
+"base": "Node",
+"class": "Math",
+"language": "GDScript",
+"path": "res://scripts/autoload/Math.gd"
 } ]
 _global_script_class_icons={
-"GlobalVariables": "res://scripts/autoload/GlobalVariables.gd"
+"GlobalVariables": "res://scripts/autoload/GlobalVariables.gd",
+"Math": "res://scripts/autoload/Math.gd"
 }
 
 [application]
@@ -32,12 +38,8 @@ GlobalVariables="*res://scripts/autoload/GlobalVariables.gd"
 
 window/size/width=1080
 window/size/height=1920
-window/size/resizable=false
-window/size/test_width=540
-window/size/test_height=960
-window/handheld/orientation="portrait"
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/size/test_width=562
+window/size/test_height=1000
 
 [input]
 

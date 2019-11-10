@@ -1,22 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://textures/gui/red 9pr.png" type="Texture" id=2]
-[ext_resource path="res://fonts/BAUHS93.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://textures/gui/rectangle.png" type="Texture" id=4]
-
+[ext_resource path="res://scenes/gui/Currency.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/BAUHS93.TTF" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 50
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 50
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=3]
 size = 70
-font_data = ExtResource( 3 )
+font_data = ExtResource( 4 )
 
 [node name="HUD" type="VBoxContainer"]
 anchor_right = 1.0
@@ -43,90 +34,29 @@ patch_margin_top = 24
 patch_margin_right = 17
 patch_margin_bottom = 18
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 1070.0
-margin_bottom = 107.0
+[node name="Currency" parent="MarginContainer" instance=ExtResource( 3 )]
 
-[node name="Gold" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
-margin_right = 528.0
-margin_bottom = 97.0
-size_flags_horizontal = 3
+[node name="Gold" parent="MarginContainer/Currency" index="0"]
 custom_constants/margin_right = 40
-custom_constants/margin_top = 20
 custom_constants/margin_left = 80
-custom_constants/margin_bottom = 20
 
-[node name="Gold" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Gold"]
+[node name="Gold" parent="MarginContainer/Currency/Gold" index="0"]
 margin_left = 80.0
-margin_top = 20.0
 margin_right = 488.0
-margin_bottom = 77.0
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Gold/Gold"]
-margin_right = 123.0
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 1 )
-text = "GOLD"
-
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/HBoxContainer/Gold/Gold"]
-margin_left = 127.0
+[node name="NinePatchRect" parent="MarginContainer/Currency/Gold/Gold" index="1"]
 margin_right = 408.0
-margin_bottom = 57.0
-size_flags_horizontal = 3
-texture = ExtResource( 4 )
-region_rect = Rect2( 14.5346, 91.9141, 265.928, 84.2105 )
-patch_margin_top = 19
 
-[node name="Value" type="Label" parent="MarginContainer/HBoxContainer/Gold/Gold/NinePatchRect"]
-margin_left = 50.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 2 )
-text = "$100t"
-align = 1
-valign = 1
-
-[node name="Fame" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 532.0
-margin_right = 1060.0
-margin_bottom = 97.0
-size_flags_horizontal = 3
+[node name="Fame" parent="MarginContainer/Currency" index="1"]
 custom_constants/margin_right = 80
-custom_constants/margin_top = 20
 custom_constants/margin_left = 40
-custom_constants/margin_bottom = 20
 
-[node name="Fame" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Fame"]
+[node name="Fame" parent="MarginContainer/Currency/Fame" index="0"]
 margin_left = 40.0
-margin_top = 20.0
 margin_right = 448.0
-margin_bottom = 77.0
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Fame/Fame"]
-margin_right = 119.0
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 1 )
-text = "FAME"
-
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/HBoxContainer/Fame/Fame"]
-margin_left = 123.0
+[node name="NinePatchRect" parent="MarginContainer/Currency/Fame/Fame" index="1"]
 margin_right = 408.0
-margin_bottom = 57.0
-size_flags_horizontal = 3
-texture = ExtResource( 4 )
-region_rect = Rect2( 14.5346, 91.9141, 265.928, 84.2105 )
-patch_margin_top = 19
-
-[node name="Value" type="Label" parent="MarginContainer/HBoxContainer/Fame/Fame/NinePatchRect"]
-margin_left = 50.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 2 )
-text = "$100t"
-align = 1
-valign = 1
 
 [node name="Control" type="Control" parent="."]
 margin_top = 121.0
@@ -149,6 +79,8 @@ margin_top = 10.0
 margin_right = 780.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 200, 100 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Menu"
 [connection signal="pressed" from="ButtonContainer/Button" to="." method="_on_Button_pressed"]
+
+[editable path="MarginContainer/Currency"]

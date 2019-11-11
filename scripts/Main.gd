@@ -4,6 +4,9 @@ var hold_pos
 var menu = preload("res://scenes/gui/Menu.tscn")
 var hud = preload("res://scenes/gui/HUD.tscn")
 
+var touch_vector = Vector2()
+var primary_touch = false
+
 func _ready():
 	$GUI/HUD.connect("menu_button_pressed",self,"_on_Menu_Button_pressed")
 
@@ -44,3 +47,6 @@ func _input(event):
 #			zoom[1] = zoom[1] - 0.25
 #			$Camera2D.set_zoom(zoom)
 			$Camera2D.zoom_at_mouse(1/1.1)
+	if event is InputEventScreenDrag:
+		set_position(get_position() - event.get_relative())
+		

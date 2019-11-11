@@ -4,11 +4,11 @@
 [ext_resource path="res://fonts/BAUHS93.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/gui/PremiumShop.tscn" type="PackedScene" id=3]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 25
 font_data = ExtResource( 2 )
 
@@ -30,23 +30,21 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 40, 40 )
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "X"
 
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
 editor/display_folded = true
-margin_top = 44.0
+margin_top = 64.0
 margin_right = 780.0
 margin_bottom = 1520.0
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 tab_align = 0
 
 [node name="PremiumShop" parent="VBoxContainer/TabContainer" instance=ExtResource( 3 )]

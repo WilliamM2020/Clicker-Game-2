@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scripts/TileManager.gd" type="Script" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://textures/attractions/castle.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=7]
 [ext_resource path="res://textures/sky.jpeg" type="Texture" id=8]
-[ext_resource path="res://scenes/gui/HUD.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/GUI.gd" type="Script" id=9]
+[ext_resource path="res://scenes/gui/HUD.tscn" type="PackedScene" id=10]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -56,5 +57,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource( 9 )
 
-[node name="HUD" parent="GUI" instance=ExtResource( 9 )]
+[node name="HUD" parent="GUI" instance=ExtResource( 10 )]
